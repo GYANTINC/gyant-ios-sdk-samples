@@ -17,7 +17,7 @@ class AppDelegate: UIResponder, UIApplicationDelegate {
     
     func application(_ application: UIApplication, didFinishLaunchingWithOptions launchOptions: [UIApplication.LaunchOptionsKey: Any]?) -> Bool {
         // Override point for customization after application launch.
-        GyantChat.start(withClientID: "<YOUR-CLIENT-ID>", andPatientID: "<YOUR-PATIENT-ID>", andIsDev: true)
+        GyantChat.start(withClientID: "<YOUR-CLIENT-ID>", patientID: "<YOUR-PATIENT-ID>", isDev: true)
         return true
     }
     
