@@ -9,7 +9,7 @@ target 'SDKSampleSwift' do
   use_frameworks!
 
   # Pods for SDKValidation
-  pod 'GyantChatSDK',  '~> 1.0.5'
+  pod 'GyantChatSDK',  '~> 1.0.6'
 
 end
 
@@ -18,6 +18,6 @@ target 'SDKSampleObjc' do
   use_frameworks!
 
   # Pods for SDKValidation
-  pod 'GyantChatSDK',  '~> 1.0.5'
+  pod 'GyantChatSDK',  '~> 1.0.6'
 
 end
