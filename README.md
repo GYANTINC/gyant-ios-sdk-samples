@@ -11,30 +11,9 @@ GYANT combines messaging, AI, and medical experts to radically improve the diagn
  - iOS 10+
  - Xcode 10.2.1+
 
-# Setup using CocoaPods
+# Install SDK
 
-Add Gyant repo:
-
-```
-pod repo add gyant-podspecs git@github.com:GYANTINC/gyant-podspecs.git
-```
-
-Add Gyant Specs source to your Podfile in the following order:
-
-```
-source 'git@github.com:GYANTINC/gyant-podspecs.git'
-source 'https://github.com/CocoaPods/Specs.git'
-```
-
-**Make sure gyant-podspecs source is the first one**
-
-Add GyantChatSDK pod to your app target.
-
-```
-pod 'GyantChatSDK', '~> 1.0.6'
-```
-
-Install the pod.
+To use the sample apps you should run the following command:
 
 ```
 pod install
