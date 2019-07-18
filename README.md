@@ -11,7 +11,7 @@ GYANT combines messaging, AI, and medical experts to radically improve the diagn
  - iOS 10+
  - Xcode 10.2.1+
 
-# Install SDK
+# Install SDK using Cocoapods
 
 To use the sample apps you should run the following command:
 
