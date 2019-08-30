@@ -19,5 +19,14 @@ To use the sample apps you should run the following command:
 pod install
 ```
 
+# Update SDK version
+
+To use the sample apps you should run the following command:
+
+```
+pod repo update
+pod update GyantChatSDK
+```
+
 **Copyright © 2019 GYANT.com, Inc. All rights reserved.**
 
