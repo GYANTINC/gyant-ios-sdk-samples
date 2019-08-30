@@ -18,7 +18,7 @@
 
 - (BOOL)application:(UIApplication *)application didFinishLaunchingWithOptions:(NSDictionary *)launchOptions {
     // Override point for customization after application launch.
-    [GyantChat startWithClientID:@"<YOUR-CLIENT-ID>" patientID:@"<YOUR-PATIENT-ID>" isDev:YES];
+    [GyantChat startWithClientID:@"<YOUR-CLIENT-ID>" patientID:@"<YOUR-PATIENT-ID>" theme:nil isDev:YES];
     return YES;
 }
 
