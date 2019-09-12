@@ -19,6 +19,7 @@
 - (BOOL)application:(UIApplication *)application didFinishLaunchingWithOptions:(NSDictionary *)launchOptions {
     // Override point for customization after application launch.
     [GyantChat startWithClientID:@"<YOUR-CLIENT-ID>" patientID:@"<YOUR-PATIENT-ID>" theme:nil isDev:YES];
+    [GyantChat setDelegate:self];
     return YES;
 }
 
@@ -49,5 +50,15 @@
     // Called when the application is about to terminate. Save data if appropriate. See also applicationDidEnterBackground:.
 }
 
+#pragma mark - GyantChatDelegate
+- (void)gyantDidReceiveMessage:(NSString *)message
+{
+    // Called when a new message is received from the server.
+}
+
+- (void)gyantRegisterForNotifications:(TokenCompletionHandler)completion
+{
+    // Called to register push notification during the chat flow.
+}
 
 @end
