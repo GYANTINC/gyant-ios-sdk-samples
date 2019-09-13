@@ -21,7 +21,7 @@ pod install
 
 # Update SDK version
 
-To use the sample apps you should run the following command:
+To update to the latest version you should run the following command:
 
 ```
 pod repo update
