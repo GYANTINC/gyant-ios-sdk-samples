@@ -16,8 +16,15 @@ class AppDelegate: UIResponder, UIApplicationDelegate, GyantChatDelegate {
     
     
     func application(_ application: UIApplication, didFinishLaunchingWithOptions launchOptions: [UIApplication.LaunchOptionsKey: Any]?) -> Bool {
-        // Override point for customization after application launch.
-        GyantChat.start(withClientID: "<YOUR-CLIENT-ID>", patientID: "<YOUR-PATIENT-ID>", theme: nil, isDev: true)
+        
+        
+        let patientData = GyantChatPatientData()
+        patientData.patientId = "<YOUR-PATIENT-ID>"
+        patientData.gender = "male" // male or female
+        patientData.visitReason = "fever"
+        patientData.dateOfBirth = "2001-03-26T20:28:32.383+0000"
+        
+        GyantChat.start(withClientID: "<YOUR-CLIENT-ID>", patientData:patientData, theme: nil, isDev: true)
         GyantChat.setDelegate(self)
         return true
     }
@@ -51,5 +58,9 @@ class AppDelegate: UIResponder, UIApplicationDelegate, GyantChatDelegate {
     
     func gyantRegister(forNotifications completion: @escaping TokenCompletionHandler) {
         // Called to register push notification during the chat flow.
+    }
+    
+    func gyantDidReceiveDiagnosis(_ diagnosis: [AnyHashable : Any]) {
+        // Called when a new diagnosis is received.
     }
 }

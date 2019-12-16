@@ -17,8 +17,15 @@
 
 
 - (BOOL)application:(UIApplication *)application didFinishLaunchingWithOptions:(NSDictionary *)launchOptions {
-    // Override point for customization after application launch.
-    [GyantChat startWithClientID:@"<YOUR-CLIENT-ID>" patientID:@"<YOUR-PATIENT-ID>" theme:nil isDev:YES];
+
+    // Sample patient data information.
+    GyantChatPatientData *patientData = [GyantChatPatientData new];
+    patientData.patientId = @"<YOUR-PATIENT-ID>";
+    patientData.gender = @"male"; // male or female
+    patientData.visitReason = @"fever";
+    patientData.dateOfBirth = @"2001-03-26T20:28:32.383+0000";
+    
+    [GyantChat startWithClientID:@"<YOUR-CLIENT-ID>" patientData:patientData theme:nil isDev:YES];
     [GyantChat setDelegate:self];
     return YES;
 }
@@ -51,6 +58,7 @@
 }
 
 #pragma mark - GyantChatDelegate
+
 - (void)gyantDidReceiveMessage:(NSString *)message
 {
     // Called when a new message is received from the server.
@@ -59,6 +67,11 @@
 - (void)gyantRegisterForNotifications:(TokenCompletionHandler)completion
 {
     // Called to register push notification during the chat flow.
+}
+
+- (void)gyantDidReceiveDiagnosis:(NSDictionary *)diagnosis
+{
+    // Called when a new diagnosis is received.
 }
 
 @end
